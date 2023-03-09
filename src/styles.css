@@ -5,13 +5,11 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-family: Macondo;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 ul,
@@ -19,10 +17,37 @@ ol {
   list-style: none;
 }
 
-.headerWrapper {
-  display: flex;
+main {
+  background-color: #dffcad;
 }
 
-.headerWrapperItem {
+.headerWrapper {
+  display: flex;
+
+  font-size: 3rem;
+}
+
+.headerWrapperItem-1,
+.headerWrapperItem-3,
+.headerWrapperItem-4 {
   flex: 1;
+}
+
+.headerWrapperItem-2 {
+  flex: 2;
+}
+
+.headerWrapperItem-3,
+.headerWrapperItem-4 {
+  text-align: right;
+}
+
+.mainWrapper {
+  display: flex;
+}
+.mainWrapperItem {
+  flex: 1;
+}
+.dropdown {
+  position: relative;
 }
