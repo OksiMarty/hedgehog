@@ -17,14 +17,13 @@ ol {
   list-style: none;
 }
 
-main {
-  background-color: #dffcad;
-}
-
 .headerWrapper {
   display: flex;
 
-  font-size: 3rem;
+  color: #796d1a;
+  padding-top: 0.5rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
 }
 
 .headerWrapperItem-1,
@@ -33,17 +32,29 @@ main {
   flex: 1;
 }
 
+img {
+  display: block;
+  margin-left: 8rem;
+}
+
 .headerWrapperItem-2 {
-  flex: 2;
+  flex: 3;
+  font-size: 2.8rem;
+  font-weight: 500;
+  padding-top: 1.3rem;
 }
 
 .headerWrapperItem-3,
 .headerWrapperItem-4 {
   text-align: right;
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding-top: 2rem;
 }
 
 .mainWrapper {
   display: flex;
+  background-color: #dffcad;
 }
 .mainWrapperItem {
   flex: 1;
