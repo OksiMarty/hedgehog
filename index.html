@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Macondo&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,7 +16,12 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/styles.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
@@ -26,51 +31,55 @@
     <header>
       <div class="headerWrapper">
         <div class="headerWrapperItem-1">
-          <img src="src/logo-hedge.png" alt="Logo with Hedgehog" width="80" />
+          <img src="src/logo-hedge.png" alt="Logo with Hedgehog" width="100" />
         </div>
 
-        <div class="headerWrapperItem-2">Hedgehog Exchange</div>
+        <div class="headerWrapperItem-2">
+          Hedgehog <br />
+          Exchange
+        </div>
         <div class="headerWrapperItem-3">09.03.2023</div>
         <div class="headerWrapperItem-4">19:31</div>
       </div>
     </header>
     <main>
       <div class="mainWrapper">
-        <div class="mainWrapperItem">
+        <div class="mainWrapperItem-1">
           <h2>Currency Rate</h2>
           <div class="container">
             <div class="row">
               <div class="col-4">
                 <ul>
-                  <li>Currency</li>
+                  <li class="listName">Currency</li>
                   <li>USD</li>
                   <li>EUR</li>
                 </ul>
               </div>
               <div class="col-4">
                 <ul>
-                  <li>Buy</li>
-                  <li>38.35</li>
-                  <li>40.10</li>
+                  <li class="listName">Buy</li>
+                  <li class="listValue">38.35</li>
+                  <li class="listValue">40.10</li>
                 </ul>
               </div>
               <div class="col-4">
                 <ul>
-                  <li>Sell</li>
-                  <li>39.40</li>
-                  <li>41.10</li>
+                  <li class="listName">Sell</li>
+
+                  <li class="listValue">39.40</li>
+                  <li class="listValue">41.10</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="mainWrapperItem">
+        <div class="mainWrapperItem-2">
           <h2>Currency Convertor</h2>
           <div class="container">
             <div class="row">
-              <div class="col-4">
+              <div class="col-4 colConvertor-1">
                 <ul>
-                  <li>I sell</li>
+                  <li class="listName">I sell</li>
                   <li>
                     <div class="input-group mb-3">
                       <input
@@ -84,26 +93,14 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        Dropdown
+                        USD
                       </button>
                       <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#"
-                            >Something else here</a
-                          >
-                        </li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Separated link</a>
-                        </li>
+                        <li><a class="dropdown-item" href="#">EUR</a></li>
                       </ul>
                     </div>
                   </li>
-                  <li>I buy</li>
+                  <li class="listName">I buy</li>
                   <li>
                     <div class="input-group mb-3">
                       <input
@@ -117,61 +114,30 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        Dropdown
+                        USD
                       </button>
                       <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Another action</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#"
-                            >Something else here</a
-                          >
-                        </li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Separated link</a>
-                        </li>
+                        <li><a class="dropdown-item" href="#">EUR</a></li>
                       </ul>
                     </div>
                   </li>
                 </ul>
               </div>
-              <div class="col-4">
+              <div class="col-3 colConvertor-2">
                 <ul>
-                  <li>I get</li>
-                  <li>3790.00</li>
-                  <li>I need</li>
-                  <li>3800.00</li>
+                  <li class="listName">I get</li>
+                  <li class="listValue pb-4">3790.00</li>
+
+                  <li class="listName">I need</li>
+                  <li class="listValue">3800.00</li>
                 </ul>
               </div>
-              <div class="col-4">
+              <div class="col-5 colConvertor-3">
                 <ul>
-                  <li></li>
-                  <li>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                    >
-                      <option selected>Open this select menu</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                  </li>
-                  <li></li>
-                  <li>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                    >
-                      <option selected>Open this select menu</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                  </li>
+                  <li class="listName">Currency</li>
+                  <li>UAH</li>
+
+                  <li>UAH</li>
                 </ul>
               </div>
             </div>
@@ -185,5 +151,10 @@
         <a href="https://github.com/OksiMarty/hedgehog">Oksy Marty</a>
       </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

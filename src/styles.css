@@ -5,7 +5,8 @@
 }
 
 body {
-  font-family: Macondo;
+  font-family: "Bubblegum Sans", cursive;
+  color: white;
 }
 
 a {
@@ -15,12 +16,13 @@ a {
 ul,
 ol {
   list-style: none;
+  font-size: 1.5rem;
+  padding: 0;
 }
 
 .headerWrapper {
   display: flex;
 
-  color: #796d1a;
   padding-top: 0.5rem;
   padding-right: 2rem;
   padding-bottom: 1rem;
@@ -29,36 +31,81 @@ ol {
 .headerWrapperItem-1,
 .headerWrapperItem-3,
 .headerWrapperItem-4 {
-  flex: 1;
+  flex: 0.5;
 }
 
 img {
   display: block;
-  margin-left: 8rem;
+  margin-left: 2rem;
 }
 
 .headerWrapperItem-2 {
   flex: 3;
-  font-size: 2.8rem;
-  font-weight: 500;
-  padding-top: 1.3rem;
+  font-size: 2rem;
+
+  padding-top: 0.5rem;
+  color: #e5c9b2;
+  font-family: Rammetto One;
+}
+.headerWrapperItem-3 {
+  text-align: right;
+}
+
+.headerWrapperItem-4 {
+  text-align: center;
 }
 
 .headerWrapperItem-3,
 .headerWrapperItem-4 {
-  text-align: right;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 400;
-  padding-top: 2rem;
+  padding-top: 2.8rem;
+  color: #d4d7d2;
 }
 
 .mainWrapper {
   display: flex;
-  background-color: #dffcad;
+  background-color: #d4d7d2;
+  padding: 2rem;
 }
-.mainWrapperItem {
+.mainWrapperItem-1 {
   flex: 1;
 }
-.dropdown {
-  position: relative;
+.mainWrapperItem-2 {
+  flex: 2;
+  padding-left: 3rem;
+}
+
+h2 {
+  padding-bottom: 1rem;
+  color: #6c757d;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.col-4 {
+  padding: 0;
+}
+.listName {
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+.listValue {
+  color: #6c757d;
+}
+
+.form-control:focus {
+  border-color: #e5c9b2;
+  box-shadow: 0 0 0 0.2rem #e5c9b2;
+  color: #6c757d;
+}
+
+.colConvertor-1 {
+  padding-right: 4rem;
+}
+.colConvertor-2 {
+  padding-right: 0;
+  padding-left: 2rem;
+}
+.colConvertor-3 {
+  padding-left: 0;
 }
