@@ -7,6 +7,7 @@
 body {
   font-family: "Bubblegum Sans", cursive;
   color: white;
+  overflow: hidden;
 }
 
 a {
@@ -68,12 +69,8 @@ img {
   background-color: #d4d7d2;
   padding: 2rem;
 }
-.mainWrapperItem-1 {
+.mainWrapperItem {
   flex: 1;
-}
-.mainWrapperItem-2 {
-  flex: 2;
-  padding-left: 3rem;
 }
 
 h2 {
@@ -82,7 +79,7 @@ h2 {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.col-4 {
+.colCurrency {
   padding: 0;
 }
 .listName {
@@ -101,11 +98,53 @@ h2 {
 
 .colConvertor-1 {
   padding-right: 4rem;
+  padding-left: 0;
 }
 .colConvertor-2 {
   padding-right: 0;
   padding-left: 2rem;
 }
-.colConvertor-3 {
-  padding-left: 0;
+footer {
+  color: #6c757d;
+  padding: 2rem;
+}
+@media (max-width: 642px) {
+  img {
+    width: 60px;
+  }
+
+  .headerWrapperItem-2 {
+    font-size: 1rem;
+  }
+  .headerWrapperItem-3 {
+    padding-right: 0.5rem;
+  }
+  .headerWrapperItem-3,
+  .headerWrapperItem-4 {
+    font-size: 1rem;
+    padding-top: 3rem;
+  }
+  .mainWrapper {
+    flex-direction: column;
+  }
+
+  .colConvertor-1 {
+    padding-right: 0;
+  }
+
+  .listValue {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+  .mainSecondItem {
+    padding-top: 3.5rem;
+  }
+  .currencyName {
+    color: #d4d7d2;
+  }
+  .mainSecondItem li {
+    font-size: 1.5rem;
+  }
 }
