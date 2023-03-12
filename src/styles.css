@@ -110,6 +110,7 @@ footer {
 @media (max-width: 642px) {
   img {
     width: 60px;
+    margin-left: 1.8rem;
   }
 
   .headerWrapperItem-2 {
@@ -145,5 +146,10 @@ footer {
   }
   .mainSecondItem li {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .currencyName {
+    color: #d4d7d2;
   }
 }
