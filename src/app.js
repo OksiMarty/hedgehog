@@ -1,3 +1,25 @@
+window.onload = () => {
+  fetch("https://api.monobank.ua/bank/currency")
+    .then((response) => response.json())
+    .then((data) => {
+      showRate(data);
+    });
+};
+
+function showRate(data) {
+  let buyUSD = document.getElementById("buyUSD");
+  buyUSD.innerText = data[0].rateBuy.toFixed(2);
+
+  let sellUSD = document.getElementById("sellUSD");
+  sellUSD.innerText = data[0].rateSell.toFixed(2);
+
+  let buyEURO = document.getElementById("buyEURO");
+  buyEURO.innerText = data[1].rateBuy.toFixed(2);
+
+  let sellEURO = document.getElementById("sellEURO");
+  sellEURO.innerText = data[1].rateSell.toFixed(2);
+}
+
 let newDate = new Date();
 
 let year = newDate.getFullYear();
@@ -22,15 +44,3 @@ function newTime() {
 }
 
 setInterval(newTime, 1000);
-
-function getRate() {
-  const api =
-    "https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11";
-  return fetch(api)
-    .then((response) => response.json())
-    .then(function (data) {
-      let usdBuyRate = document.getElementById("buyUsd");
-      usdBuyRate.innerText = data[1].buy;
-    });
-}
-getRate();
