@@ -103,6 +103,23 @@ h2 {
   padding-right: 0;
   padding-left: 2rem;
 }
+#buttonCalculate1,
+#buttonCalculate2 {
+  background-color: #ffff;
+  color: #6c757d;
+  transition: all 0.1s ease-in-out;
+  border-radius: 0.4rem;
+  box-shadow: none;
+  padding: 0.2rem;
+  border-style: none;
+}
+#buttonCalculate1:hover,
+#buttonCalculate2:hover {
+  cursor: pointer;
+  color: #ffff;
+  background-color: #6c757d;
+}
+
 footer {
   color: #6c757d;
   padding: 2rem;
