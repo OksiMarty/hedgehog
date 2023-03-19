@@ -64,12 +64,15 @@ img {
 }
 
 .mainWrapper {
-  display: flex;
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
   background-color: #d4d7d2;
   padding: 2rem;
 }
-.mainWrapperItem {
-  flex: 1;
+.mainWrapperItem:nth-child(odd) {
+  grid-column: span 1.8;
 }
 
 h2 {
@@ -96,12 +99,12 @@ h2 {
 }
 
 .colConvertor-1 {
-  padding-right: 4rem;
+  padding-right: 0.5rem;
   padding-left: 0;
 }
 .colConvertor-2 {
   padding-right: 0;
-  padding-left: 2rem;
+  padding-left: 0.5rem;
 }
 #buttonCalculate1,
 #buttonCalculate2 {
@@ -110,8 +113,16 @@ h2 {
   transition: all 0.1s ease-in-out;
   border-radius: 0.4rem;
   box-shadow: none;
-  padding: 0.2rem;
+  padding: 0.5rem;
   border-style: none;
+  display: block;
+  text-transform: uppercase;
+}
+#buttonCalculate1 {
+  margin-top: 3.1rem;
+}
+#buttonCalculate2 {
+  margin-top: 4rem;
 }
 #buttonCalculate1:hover,
 #buttonCalculate2:hover {
@@ -119,7 +130,12 @@ h2 {
   color: #ffff;
   background-color: #6c757d;
 }
-
+.currencyName {
+  color: #d4d7d2;
+}
+span {
+  font-size: 0.7rem;
+}
 footer {
   color: #6c757d;
   padding: 2rem;
@@ -129,44 +145,47 @@ footer {
     width: 60px;
     margin-left: 1.8rem;
   }
+  .mainFirstItem {
+    padding-bottom: 3rem;
+  }
 
-  .headerWrapperItem-2 {
+  
+
+  /*.headerWrapperItem-2 {
+    font-size: 1rem;
+  }.listValue {
     font-size: 1rem;
   }
-  .headerWrapperItem-3 {
-    padding-right: 0.5rem;
-  }
+
   .headerWrapperItem-3,
   .headerWrapperItem-4 {
     font-size: 1rem;
-    padding-top: 3rem;
-  }
-  .mainWrapper {
-    flex-direction: column;
-  }
-
-  .colConvertor-1 {
-    padding-right: 0;
   }
 
   .listValue {
-    font-size: 1.3rem;
-  }
+    font-size: 1rem;
+  }*/
   h2 {
     font-size: 1.7rem;
-  }
-  .mainSecondItem {
-    padding-top: 3.5rem;
-  }
-  .currencyName {
-    color: #d4d7d2;
-  }
-  .mainSecondItem li {
+  }}
+
+  /*.mainSecondItem li {
     font-size: 1.5rem;
+  }.mainSecondItem {
+    padding-top: 3.5rem;
+  }.colConvertor-1 {
+    padding-right: 0;
+  }.headerWrapperItem-3 {
+    padding-right: 0.5rem;
   }
-}
-@media (max-width: 1024px) {
-  .currencyName {
-    color: #d4d7d2;
+   .headerWrapperItem-3,
+  .headerWrapperItem-4 { padding-top: 3rem;}
+}*/
+@media (max-width: 1180px) {
+  /*.listValueConvertor {
+    font-size: 1rem;
+  }*/
+  .mainFirstItem {
+    padding-bottom: 3rem;
   }
 }

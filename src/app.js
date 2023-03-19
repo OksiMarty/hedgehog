@@ -45,8 +45,22 @@ function newTime() {
 
 setInterval(newTime, 1000);
 
-let sellConvertor = document.getElementById("sellConvertor");
-sellConvertor.onChange = function () {
-  let moneySell = sellConvertor.value;
-  console.log(moneySell);
-};
+let buttonCalculate1 = document.getElementById("buttonCalculate1");
+buttonCalculate1.addEventListener("click", handleClick1);
+
+function handleClick1(event) {
+  event.preventDefault();
+
+  let sellConvertor = document.getElementById("sellConvertor");
+
+  let inputSell = sellConvertor.value.trim();
+
+  if (inputSell && !isNaN(inputSell)) {
+    
+  } else {
+    sellConvertor.setAttribute("placeholder", "enter a number");
+    
+    }
+
+}
+  

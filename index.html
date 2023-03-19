@@ -44,13 +44,13 @@
     </header>
     <main>
       <div class="mainWrapper">
-        <div class="mainWrapperItem">
+        <div class="mainWrapperItem mainFirstItem">
           <h2>Currency Convertor</h2>
           <div class="container">
             <div class="row">
               <div class="col-6 colConvertor-1">
                 <ul>
-                  <li class="listName">If I sell</li>
+                  <li class="listName">Sell</li>
                   <li>
                     <div class="input-group mb-3">
                       <input
@@ -72,7 +72,7 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="listName">If I buy</li>
+                  <li class="listName">Buy</li>
                   <li>
                     <div class="input-group mb-3">
                       <input
@@ -96,18 +96,18 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-6 colConvertor-2">
+              <div class="col-2 colConvertor-2">
                 <ul>
-                  <li class="listName">I get</li>
-                  <li class="listValue pb-3">
-                    <button id="buttonCalculate1">Calculate</button>
-                  </li>
+                  <li class="listName">Get</li>
+                  <li class="listValue pb-3 listValueConvertor">3467</li>
 
-                  <li class="listName">I need</li>
-                  <li class="listValue">
-                    <button id = "buttonCalculate2">Calculate</button>
-                  </li>
+                  <li class="listName">Need</li>
+                  <li class="listValue pt-1 listValueConvertor">3568</li>
                 </ul>
+              </div>
+              <div class="col-4 colConvertor-3">
+                <button id="buttonCalculate1">Count UAH</button>
+                <button id="buttonCalculate2">Count UAH</button>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@
           <h2>Currency Rate</h2>
           <div class="container">
             <div class="row">
-              <div class="col-3 colCurrency">
+              <div class="col-2 colCurrency">
                 <ul>
                   <li class="listName currencyName">Currency</li>
                   <li>USD</li>
@@ -127,18 +127,18 @@
               <div class="col-3 colCurrency">
                 <ul>
                   <li class="listName">Buy</li>
-                  <li class="listValue" id="buyUSD"></li>
-                  <li class="listValue pt-4" id="buyEURO"></li>
+                  <li class="listValue" id="buyUSD">36.55</li>
+                  <li class="listValue pt-4" id="buyEURO">40.73</li>
                 </ul>
               </div>
               <div class="col-3 colCurrency">
                 <ul>
                   <li class="listName">Sell</li>
-                  <li class="listValue" id="sellUSD"></li>
-                  <li class="listValue pt-4" id="sellEURO"></li>
+                  <li class="listValue" id="sellUSD">38.08</li>
+                  <li class="listValue pt-4" id="sellEURO">41.17</li>
                 </ul>
               </div>
-              <div class="col-3 colCurrency"></div>
+              <div class="col-4 colCurrency"></div>
             </div>
           </div>
         </div>
