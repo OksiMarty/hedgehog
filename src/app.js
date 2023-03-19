@@ -1,4 +1,4 @@
-/*window.onload = () => {
+window.onload = () => {
   fetch("https://api.monobank.ua/bank/currency")
     .then((response) => response.json())
     .then((data) => {
@@ -13,12 +13,15 @@ function showRate(data) {
   let sellUSD = document.getElementById("sellUSD");
   sellUSD.innerText = data[0].rateSell.toFixed(2);
 
+  let listValueConvertor1 = document.getElementById("listValueConvertor1");
+  listValueConvertor1.innerText = data[0].rateBuy*100;
+
   let buyEURO = document.getElementById("buyEURO");
   buyEURO.innerText = data[1].rateBuy.toFixed(2);
 
   let sellEURO = document.getElementById("sellEURO");
   sellEURO.innerText = data[1].rateSell.toFixed(2);
-}*/
+}
 
 let newDate = new Date();
 
@@ -45,7 +48,7 @@ function newTime() {
 
 setInterval(newTime, 1000);
 
-let buttonCalculate1 = document.getElementById("buttonCalculate1");
+/*let buttonCalculate1 = document.getElementById("buttonCalculate1");
 buttonCalculate1.addEventListener("click", handleClick1);
 
 function handleClick1(event) {
@@ -62,5 +65,4 @@ function handleClick1(event) {
     
     }
 
-}
-  
+}*/

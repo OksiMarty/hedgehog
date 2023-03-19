@@ -108,12 +108,12 @@ h2 {
 }
 #buttonCalculate1,
 #buttonCalculate2 {
-  background-color: #ffff;
-  color: #6c757d;
+  background-color: #6c757d;
+  color: #ffff;
   transition: all 0.1s ease-in-out;
   border-radius: 0.4rem;
   box-shadow: none;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-style: none;
   display: block;
   text-transform: uppercase;
@@ -122,20 +122,22 @@ h2 {
   margin-top: 3.1rem;
 }
 #buttonCalculate2 {
-  margin-top: 4rem;
+  margin-top: 4.1rem;
 }
 #buttonCalculate1:hover,
 #buttonCalculate2:hover {
   cursor: pointer;
-  color: #ffff;
-  background-color: #6c757d;
+  color: #6c757d;
+  background-color: #ffff;
 }
 .currencyName {
   color: #d4d7d2;
 }
-span {
-  font-size: 0.7rem;
+.listValueConvertor,
+.listNameSecond {
+  padding-left: 1rem;
 }
+
 footer {
   color: #6c757d;
   padding: 2rem;
@@ -145,46 +147,23 @@ footer {
     width: 60px;
     margin-left: 1.8rem;
   }
-  .mainFirstItem {
-    padding-bottom: 3rem;
-  }
-
-  
-
-  /*.headerWrapperItem-2 {
-    font-size: 1rem;
-  }.listValue {
-    font-size: 1rem;
-  }
-
+  .headerWrapperItem-2,
   .headerWrapperItem-3,
   .headerWrapperItem-4 {
     font-size: 1rem;
   }
 
-  .listValue {
-    font-size: 1rem;
-  }*/
   h2 {
     font-size: 1.7rem;
-  }}
-
-  /*.mainSecondItem li {
-    font-size: 1.5rem;
-  }.mainSecondItem {
-    padding-top: 3.5rem;
-  }.colConvertor-1 {
-    padding-right: 0;
-  }.headerWrapperItem-3 {
-    padding-right: 0.5rem;
   }
-   .headerWrapperItem-3,
-  .headerWrapperItem-4 { padding-top: 3rem;}
-}*/
+  .listValueConvertor1,
+  .listValueConvertor2,
+.listNameSecond {
+  padding-left: 0.1rem;
+}
+}
+
 @media (max-width: 1180px) {
-  /*.listValueConvertor {
-    font-size: 1rem;
-  }*/
   .mainFirstItem {
     padding-bottom: 3rem;
   }
