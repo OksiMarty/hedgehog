@@ -7,7 +7,10 @@ window.onload = () => {
 };
 
 let buyUSD = document.getElementById("buyUSD");
-let buyEURO = document.getElementById("buyEURO");
+let buyEUR = document.getElementById("buyEUR");
+
+let sellUSD = document.getElementById("sellUSD");
+let sellEUR = document.getElementById("sellEUR");
 
 function showRate(data) {
   buyUSD.innerText = data[0].rateBuy.toFixed(2);
@@ -15,16 +18,14 @@ function showRate(data) {
   let listValueConvertor1 = document.getElementById("listValueConvertor1");
   listValueConvertor1.innerText = data[0].rateBuy.toFixed(2) * 100;
 
-  let sellUSD = document.getElementById("sellUSD");
   sellUSD.innerText = data[0].rateSell.toFixed(2);
 
   let listValueConvertor2 = document.getElementById("listValueConvertor2");
   listValueConvertor2.innerText = data[0].rateSell.toFixed(2) * 100;
 
-  buyEURO.innerText = data[1].rateBuy.toFixed(2);
+  buyEUR.innerText = data[1].rateBuy.toFixed(2);
 
-  let sellEURO = document.getElementById("sellEURO");
-  sellEURO.innerText = data[1].rateSell.toFixed(2);
+  sellEUR.innerText = data[1].rateSell.toFixed(2);
 }
 
 let newDate = new Date();
@@ -72,14 +73,44 @@ function handleClick1(event) {
       listValueConvertor1.innerHTML = Math.round(inputSell * buyUSD.innerText);
     } else {
       if (selectedValue == "EUR") {
-        
         listValueConvertor1.innerText = Math.round(
-          inputSell * buyEURO.innerText
+          inputSell * buyEUR.innerText
         );
       }
     }
   } else {
     sellConvertor.value = "";
     sellConvertor.setAttribute("placeholder", "enter a number");
+  }
+}
+
+let buttonCalculate2 = document.getElementById("buttonCalculate2");
+buttonCalculate2.addEventListener("click", handleClick2);
+
+function handleClick2(event) {
+  event.preventDefault();
+
+  let buyConvertor = document.getElementById("buyConvertor");
+  let inputBuy = buyConvertor.value.trim();
+
+  let buySelect = document.getElementById("buySelect");
+  let selectedOption = buySelect.options[buySelect.selectedIndex];
+  let selectedValue = selectedOption.value;
+
+  let listValueConvertor2 = document.getElementById("listValueConvertor2");
+
+  if (inputBuy && !isNaN(inputBuy)) {
+    if (selectedValue == "USD") {
+      listValueConvertor2.innerHTML = Math.round(inputBuy * sellUSD.innerText);
+    } else {
+      if (selectedValue == "EUR") {
+        listValueConvertor2.innerText = Math.round(
+          inputBuy * sellEUR.innerText
+        );
+      }
+    }
+  } else {
+    buyConvertor.value = "";
+    buyConvertor.setAttribute("placeholder", "enter a number");
   }
 }
