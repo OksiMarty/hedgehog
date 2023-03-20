@@ -6,17 +6,21 @@ window.onload = () => {
     });
 };
 
+let buyUSD = document.getElementById("buyUSD");
+let buyEURO = document.getElementById("buyEURO");
+
 function showRate(data) {
-  let buyUSD = document.getElementById("buyUSD");
   buyUSD.innerText = data[0].rateBuy.toFixed(2);
+
+  let listValueConvertor1 = document.getElementById("listValueConvertor1");
+  listValueConvertor1.innerText = data[0].rateBuy.toFixed(2) * 100;
 
   let sellUSD = document.getElementById("sellUSD");
   sellUSD.innerText = data[0].rateSell.toFixed(2);
 
-  let listValueConvertor1 = document.getElementById("listValueConvertor1");
-  listValueConvertor1.innerText = data[0].rateBuy*100;
+  let listValueConvertor2 = document.getElementById("listValueConvertor2");
+  listValueConvertor2.innerText = data[0].rateSell.toFixed(2) * 100;
 
-  let buyEURO = document.getElementById("buyEURO");
   buyEURO.innerText = data[1].rateBuy.toFixed(2);
 
   let sellEURO = document.getElementById("sellEURO");
@@ -48,21 +52,34 @@ function newTime() {
 
 setInterval(newTime, 1000);
 
-/*let buttonCalculate1 = document.getElementById("buttonCalculate1");
+let buttonCalculate1 = document.getElementById("buttonCalculate1");
 buttonCalculate1.addEventListener("click", handleClick1);
 
 function handleClick1(event) {
   event.preventDefault();
 
   let sellConvertor = document.getElementById("sellConvertor");
-
   let inputSell = sellConvertor.value.trim();
 
-  if (inputSell && !isNaN(inputSell)) {
-    
-  } else {
-    sellConvertor.setAttribute("placeholder", "enter a number");
-    
-    }
+  let sellSelect = document.getElementById("sellSelect");
+  let selectedOption = sellSelect.options[sellSelect.selectedIndex];
+  let selectedValue = selectedOption.value;
 
-}*/
+  let listValueConvertor1 = document.getElementById("listValueConvertor1");
+
+  if (inputSell && !isNaN(inputSell)) {
+    if (selectedValue == "USD") {
+      listValueConvertor1.innerHTML = Math.round(inputSell * buyUSD.innerText);
+    } else {
+      if (selectedValue == "EUR") {
+        
+        listValueConvertor1.innerText = Math.round(
+          inputSell * buyEURO.innerText
+        );
+      }
+    }
+  } else {
+    sellConvertor.value = "";
+    sellConvertor.setAttribute("placeholder", "enter a number");
+  }
+}

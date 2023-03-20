@@ -52,48 +52,41 @@
                 <ul>
                   <li class="listName">Sell</li>
                   <li>
-                    <div class="input-group mb-3">
-                      <input
-                        type="text"
-                        class="form-control"
-                        aria-label="Text input with dropdown button"
-                        id="sellConvertor"
-                        placeholder="100"
-                      />
-                      <button
-                        class="btn btn-outline-secondary dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        USD
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">EUR</a></li>
-                      </ul>
+                    <div class="sellContainer mb-3">
+                      <div class="sellContainerItem1 ">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="sellConvertor"
+                          placeholder="100"
+
+                        />
+                      </div>
+                      <div class="sellContainerItem2">
+                        <select id="sellSelect">
+                          <option value="USD">USD</option>
+                          <option value="EUR">EUR</option>
+                        </select>
+                      </div>
                     </div>
                   </li>
                   <li class="listName">Buy</li>
                   <li>
-                    <div class="input-group mb-3">
-                      <input
-                        type="text"
-                        class="form-control"
-                        aria-label="Text input with dropdown button"
-                        id="buyConvertor"
-                        placeholder="100"
-                      />
-                      <button
-                        class="btn btn-outline-secondary dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        USD
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">EUR</a></li>
-                      </ul>
+                    <div class="buyContainer mb-3">
+                      <div class="buyContainerItem1">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="buyConvertor"
+                          placeholder="100"
+                        />
+                      </div>
+                      <div class="buyContainerItem2">
+                        <select id="buySelect">
+                          <option value="USD">USD</option>
+                          <option value="EUR">EUR</option>
+                        </select>
+                      </div>
                     </div>
                   </li>
                 </ul>
@@ -101,10 +94,16 @@
               <div class="col-2 colConvertor-2">
                 <ul>
                   <li class="listName listNameSecond">Get</li>
-                  <li class="listValue pb-3 listValueConvertor1">*****</li>
+                  <li
+                    class="listValue pb-3 listValueConvertor1"
+                    id="listValueConvertor1"
+                  ></li>
 
                   <li class="listName listNameSecond">Need</li>
-                  <li class="listValue pt-1 listValueConvertor2">*****</li>
+                  <li
+                    class="listValue pt-1 listValueConvertor2"
+                    id="listValueConvertor2"
+                  ></li>
                 </ul>
               </div>
               <div class="col-4 colConvertor-3">
