@@ -55,7 +55,7 @@ function handleClick1(event) {
     }
   } else {
     sellConvertor.value = "";
-    sellConvertor.setAttribute("Number!");
+    sellConvertor.setAttribute("placeholder", "Number!");
     sellConvertor.style.outline = "0.2rem solid red";
   }
 }
