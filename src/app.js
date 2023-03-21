@@ -28,31 +28,6 @@ function showRate(data) {
   sellEUR.innerText = data[1].rateSell.toFixed(2);
 }
 
-let newDate = new Date();
-
-let year = newDate.getFullYear();
-let day = newDate.getDate();
-
-let date = document.getElementById("date");
-let month = newDate.getMonth() + 1;
-
-if (month < 10) {
-  month = `0${month}`;
-}
-
-date.innerHTML = `${day}:${month}:${year}`;
-
-function newTime() {
-  let time = document.getElementById("time");
-
-  let date = new Date();
-  let hours = date.getHours().toString().padStart(2, "0");
-  let minutes = date.getMinutes().toString().padStart(2, "0");
-  time.textContent = `${hours}:${minutes}`;
-}
-
-setInterval(newTime, 1000);
-
 let buttonCalculate1 = document.getElementById("buttonCalculate1");
 buttonCalculate1.addEventListener("click", handleClick1);
 
@@ -114,3 +89,28 @@ function handleClick2(event) {
     buyConvertor.setAttribute("placeholder", "enter a number");
   }
 }
+
+let newDate = new Date();
+
+let year = newDate.getFullYear();
+let day = newDate.getDate();
+
+let date = document.getElementById("date");
+let month = newDate.getMonth() + 1;
+
+if (month < 10) {
+  month = `0${month}`;
+}
+
+date.innerHTML = `${day}:${month}:${year}`;
+
+function newTime() {
+  let time = document.getElementById("time");
+
+  let date = new Date();
+  let hours = date.getHours().toString().padStart(2, "0");
+  let minutes = date.getMinutes().toString().padStart(2, "0");
+  time.textContent = `${hours}:${minutes}`;
+}
+
+setInterval(newTime, 1000);
