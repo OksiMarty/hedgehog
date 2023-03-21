@@ -56,7 +56,7 @@ function handleClick1(event) {
   } else {
     sellConvertor.value = "";
     sellConvertor.setAttribute("placeholder", "Number!");
-    sellConvertor.style.outline = "0.2rem solid red";
+    
   }
 }
 
@@ -88,7 +88,7 @@ function handleClick2(event) {
   } else {
     buyConvertor.value = "";
     buyConvertor.setAttribute("placeholder", "Number!");
-    buyConvertor.style.outline = "0.2rem solid red";
+    
   }
 }
 
