@@ -66,8 +66,9 @@ img {
 .mainWrapper {
   display: grid;
   align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+
   background-color: #d4d7d2;
   padding: 2rem;
 }
@@ -113,17 +114,17 @@ h2 {
   transition: all 0.1s ease-in-out;
   border-radius: 0.4rem;
   box-shadow: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 3rem;
   border-style: none;
   display: block;
+  margin-left: 1rem;
   text-transform: uppercase;
-}
-#buttonCalculate1 {
-  margin-top: 3.1rem;
+  font-size: 1rem;
 }
 #buttonCalculate2 {
-  margin-top: 4.1rem;
+  padding: 0.5rem 2.7rem;
 }
+
 #buttonCalculate1:hover,
 #buttonCalculate2:hover {
   cursor: pointer;
@@ -134,32 +135,35 @@ h2 {
   color: #d4d7d2;
 }
 .listValueConvertor1,
-.listValueConvertor2, .listNameSecond {
+.listValueConvertor2 {
   padding-left: 1rem;
 }
 
-.sellContainer, .buyContainer {
+.sellContainer,
+.buyContainer {
   display: flex;
 }
-.sellContainerItem1, .buyContainerItem1 {
-flex: 2;
-padding-right: 1rem;
-}
-.sellContainerItem2, .buyContainerItem2 {
+.sellContainerItem1,
+.buyContainerItem1 {
   flex: 1;
+}
+.sellContainerItem2,
+.buyContainerItem2 {
+  flex: 1;
+  text-align: end;
 }
 
 select {
   background-color: #6c757d;
   color: white;
   font-size: 1rem;
-   border-radius: 0.4rem;
-   padding: 0.5rem;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
 }
 
 select:focus {
-  outline-style: none;}
-
+  outline-style: none;
+}
 
 footer {
   color: #6c757d;
@@ -179,11 +183,6 @@ footer {
   h2 {
     font-size: 1.7rem;
   }
-  .listValueConvertor1,
-  .listValueConvertor2,
-  .listNameSecond {
-    padding-left: 0.1rem;
-  }
 }
 
 @media (max-width: 1180px) {
@@ -191,5 +190,3 @@ footer {
     padding-bottom: 3rem;
   }
 }
-
- 

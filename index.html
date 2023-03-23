@@ -62,19 +62,11 @@
           <h2>Currency Convertor</h2>
           <div class="container">
             <div class="row">
-              <div class="col-6 colConvertor-1">
+              <div class="col-4 colConvertor-1">
                 <ul>
-                  <li class="listName">Sell</li>
                   <li>
-                    <div class="sellContainer mb-3">
-                      <div class="sellContainerItem1">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="sellConvertor"
-                          placeholder="100"
-                        />
-                      </div>
+                    <div class="sellContainer">
+                      <div class="listName sellContainerItem1">Sell</div>
                       <div class="sellContainerItem2">
                         <select id="sellSelect">
                           <option value="USD">USD</option>
@@ -83,17 +75,19 @@
                       </div>
                     </div>
                   </li>
-                  <li class="listName">Buy</li>
                   <li>
-                    <div class="buyContainer mb-3">
-                      <div class="buyContainerItem1">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="buyConvertor"
-                          placeholder="100"
-                        />
-                      </div>
+                    <div class="inputWrapper">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="sellConvertor"
+                        placeholder="100"
+                      />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="buyContainer mt-5">
+                      <div class="listName buyContainerItem1">Buy</div>
                       <div class="buyContainerItem2">
                         <select id="buySelect">
                           <option value="USD">USD</option>
@@ -102,27 +96,42 @@
                       </div>
                     </div>
                   </li>
+                  <li>
+                    <div class="inputWrapper">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="buyConvertor"
+                        placeholder="100"
+                      />
+                    </div>
+                  </li>
                 </ul>
               </div>
-              <div class="col-2 colConvertor-2">
+              <div class="col-8 colConvertor-2">
                 <ul>
-                  <li class="listName listNameSecond">Get</li>
-                  <li
-                    class="listValue pb-3 listValueConvertor1"
-                    id="listValueConvertor1"
-                  ></li>
+                  <li>
+                    <button id="buttonCalculate1">GET UAH</button>
+                  </li>
+                  <li>
+                    <div
+                      class="listValue pt-3 listValueConvertor1"
+                      id="listValueConvertor1"
+                    ></div>
+                  </li>
 
-                  <li class="listName listNameSecond">Need</li>
-                  <li
-                    class="listValue pt-1 listValueConvertor2"
-                    id="listValueConvertor2"
-                  ></li>
+                  <li>
+                    <button id="buttonCalculate2" class="mt-5">NEED UAH</button>
+                  </li>
+                  <li>
+                    <div
+                      class="listValue pt-3 listValueConvertor2"
+                      id="listValueConvertor2"
+                    ></div>
+                  </li>
                 </ul>
               </div>
-              <div class="col-4 colConvertor-3">
-                <button id="buttonCalculate1">UAH</button>
-                <button id="buttonCalculate2">UAH</button>
-              </div>
+              <div class="col-4 colConvertor-3"></div>
             </div>
           </div>
         </div>

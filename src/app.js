@@ -56,7 +56,6 @@ function handleClick1(event) {
   } else {
     sellConvertor.value = "";
     sellConvertor.setAttribute("placeholder", "Number!");
-    
   }
 }
 
@@ -88,7 +87,6 @@ function handleClick2(event) {
   } else {
     buyConvertor.value = "";
     buyConvertor.setAttribute("placeholder", "Number!");
-    
   }
 }
 
